@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::selection {
+  color: #262626;
+  background: #fde047;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafafa;
+  border: 3px solid #262626;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid #262626;
+  background: #2563eb;
+  border-radius: 50px;
+}
+
+@layer components {
+  main,
+  section,
+  footer {
+    @apply px-6 lg:px-32;
+  }
+}

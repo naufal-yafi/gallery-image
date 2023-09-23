@@ -1,13 +1,17 @@
-import Title from "@layout/Title";
-import { Quicksand } from "next/font/google";
-const quicksand = Quicksand({ subsets: ["latin"] });
+import quicksand from "@component/font";
+import HomeListImage from "@layout/Home/HomeListImage";
+import Layout from "@layout/Layout";
 
 const Home = () => {
   return (
     <>
-      <Title title="Gallery Image" />
-
-      <main className={quicksand.className}></main>
+      <Layout title="Gallery Image">
+        <main
+          className={`pt-32 flex justify-center items-center ${quicksand.className}`}
+        >
+          <HomeListImage />
+        </main>
+      </Layout>
     </>
   );
 };

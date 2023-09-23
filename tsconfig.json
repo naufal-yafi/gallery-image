@@ -15,7 +15,9 @@
     "incremental": true,
     "paths": {
       "@style": ["./src/styles/globals.css"],
-      "@icon": ["./public/icons/*"],
+      "@icon/*": ["./public/icons/*"],
+      "@component/*": ["./src/components/*"],
+      "@model/*": ["./src/models/*"],
       "@layout/*": ["./src/layouts/*"],
       "@/*": ["./src/*"]
     }
