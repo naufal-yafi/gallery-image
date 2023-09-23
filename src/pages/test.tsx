@@ -1,7 +1,7 @@
-import LoadingListImage from "@component/Loading/LoadingHome";
+import HomeLoading from "@layout/Home/HomeLoading";
 
 const Test = () => {
-  return <LoadingListImage />;
+  return <HomeLoading />;
 };
 
 export default Test;

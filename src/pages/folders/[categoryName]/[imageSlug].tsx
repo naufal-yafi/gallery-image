@@ -33,7 +33,7 @@ const ImageDetail = () => {
 
   return (
     <>
-      <Layout title={`${imageSlug} - Gallery Image`}>
+      <Layout title={`${data.title} - Gallery Image`}>
         <main className={`pt-32 ${quicksand.className}`}>
           <CardDisplayImage
             img={data.images[0]}
