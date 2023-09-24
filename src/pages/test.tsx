@@ -1,7 +1,7 @@
-import HomeLoading from "@layout/Home/HomeLoading";
+import IMGDetailLoading from "@layout/ImageDetail/IMGDetailLoading";
 
 const Test = () => {
-  return <HomeLoading />;
+  return <IMGDetailLoading />;
 };
 
 export default Test;

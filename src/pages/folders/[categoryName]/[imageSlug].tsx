@@ -3,10 +3,14 @@ import NotFound from "@/pages/404";
 import InternalServerError from "@/pages/500";
 import CardDisplayImage from "@component/CardDisplayImage";
 import quicksand from "@component/font";
-import IMGDetailLoading from "@layout/ImageDetail/IMGDetailLoading";
 import Layout from "@layout/Layout";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import useSWR from "swr";
+
+const Loading = dynamic(() => import("@layout/ImageDetail/IMGDetailLoading"), {
+  ssr: false,
+});
 
 const ImageDetail = () => {
   const fetcher = (args: RequestInfo | URL) =>
@@ -21,7 +25,7 @@ const ImageDetail = () => {
   );
 
   if (error) return <InternalServerError />;
-  if (isLoading) return <IMGDetailLoading />;
+  if (isLoading) return <Loading />;
 
   if (data && data.title) {
     const compareTitleSlug =
