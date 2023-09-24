@@ -1,3 +1,4 @@
+import SearchBar from "@component/SearchBar";
 import quicksand from "@component/font";
 import HomeListImage from "@layout/Home/HomeListImage";
 import Layout from "@layout/Layout";
@@ -28,11 +29,7 @@ const Home = () => {
           className={`pt-24 flex flex-col justify-center items-center ${quicksand.className}`}
         >
           <div className="px-3 md:px-16 w-full flex justify-end items-end">
-            <input
-              type="text"
-              placeholder="Search here..."
-              className="border-[3px] border-neutral-800 mb-14 px-5 py-2 font-bold text-neutral-800 w-full outline-none"
-            />
+            <SearchBar />
             <div className="w-full px-6 md:px-32 absolute -z-10 flex justify-end left-0">
               <div className="w-full px-3 md:px-16">
                 <div className="w-full h-[30px] bg-neutral-800 translate-y-[-50px] translate-x-[10px]"></div>

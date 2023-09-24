@@ -1,7 +1,14 @@
 import Link from "next/link";
+import formattedDate from "./formattedDate";
 
 /* eslint-disable @next/next/no-img-element */
 const CardDisplayImage = (props: any) => {
+  const DATE = props.date.split(" | ");
+  const isSameDate = DATE[0] === DATE[1];
+  const CONDITION = isSameDate ? "Created " : "Updated ";
+
+  let dateTime = isSameDate ? formattedDate(DATE[0]) : formattedDate(DATE[1]);
+
   return (
     <>
       <figure className="grid grid-cols-1 lg:grid-cols-2 gap-5">
@@ -19,6 +26,10 @@ const CardDisplayImage = (props: any) => {
           <figcaption>
             <h1 className="text-5xl font-bold">{props.title}</h1>
             <p className="mt-5">{props.desc}</p>
+            <p className="mt-4 text-xs font-bold">
+              {CONDITION}
+              {dateTime}
+            </p>
           </figcaption>
         </div>
       </figure>
@@ -31,6 +42,7 @@ CardDisplayImage.defaultProps = {
   category_name: "Category Name",
   title: "Image Title",
   desc: "image description...",
+  date: "",
 };
 
 export default CardDisplayImage;
