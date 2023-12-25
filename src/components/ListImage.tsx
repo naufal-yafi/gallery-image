@@ -1,7 +1,7 @@
 import InternalServerError from "@/pages/500";
+import HomeLoading from "@layout/Home/HomeLoading";
 import useSWR from "swr";
 import CardImage from "./CardImage";
-import LoadingHome from "./Loading/LoadingHome";
 
 const shuffleArray = (array: any[]) => {
   const shuffledArray = [...array];
@@ -22,7 +22,7 @@ const ListImage = (props: any) => {
   );
 
   if (error) return <InternalServerError />;
-  if (isLoading) return <LoadingHome />;
+  if (isLoading) return <HomeLoading />;
 
   const result = props.random ? shuffleArray(data) : data;
 

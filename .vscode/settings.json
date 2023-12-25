@@ -7,7 +7,7 @@
   "files.autoSave": "afterDelay",
   "editor.wordWrap": "on",
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
   "[markdown]": {
     "editor.defaultFormatter": null
